@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Say No(o) Compass</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" sizes="16x16" href="./Images/favicon-16x16.png">
-
 </head>
-
 <body>
     <header>
-        <h1><img src="./Images/logo NoCompass.png" alt="Say No(o) Compass" height="150px" width="150px">
-            Say No(o) Compass</h1>
+        <h1><img src="./Images/logo NoCompass.png" alt="Say No(o) Compass" height="150px" width="150px"> Say No(o) Compass</h1>
         <nav>
             <ul>
                 <li><a href="/index.html">Home</a></li>
@@ -23,31 +19,27 @@
         </nav>
     </header>
     <main>
-
         <section class="login-register">
-
-            <h2>Login</h2>
-
-            <form action="/submit-login" method="post">
+            <h2>Register</h2>
+            <form action="/submit-register" method="post">
                 <label for="username">Username:</label><br>
                 <input type="text" id="username" name="username" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
 
                 <label for="password">Password:</label><br>
                 <input type="password" id="password" name="password" required><br><br>
 
-                <input type="submit" value="Login">
+                <input type="submit" value="Register">
             </form>
-
-            <p>Don't have an account? <a href="/register.html">Register</a></p>
-
         </section>
-
     </main>
     <footer>
         <section class="footer">
             <p><a href="/contact.html" class="button-klik">Contact</a></p>
             <p>&copy; 2026 Say No(o) Compass. All rights reserved.</p>
-    </footer>
+        </section>
+    </footer>    
 </body>
-
 </html>
