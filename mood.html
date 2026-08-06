@@ -34,20 +34,22 @@
 
             <form>
 
-                <label>
-                    <input type="radio" name="mood" value="very-bad">
-                    😞 Very bad
-                </label>
+                <!--TODO:  Verbeter de weergave van de mood-selectie. Mogelijk vervangen door gestylede keuzekaarten of een mooiere radiobutton-opmaak. Frontend eerst volledig afwerken. -->
+                <div class="radio-option">
+                    <input type="radio" id="very-bad" name="mood" value="very-bad">
+                    <label for="very-bad">😞 Very bad</label>
+                </div>
 
-                <label>
-                    <input type="radio" name="mood" value="neutral">
-                    😐 Neutral
-                </label>
+                <div class="radio-option">
+                    <input type="radio" id="neutral" name="mood" value="neutral">
+                    <label for="neutral">😐 Neutral</label>
+                </div>
 
-                <label>
-                    <input type="radio" name="mood" value="very-good">
-                    😄 Very good
-                </label>
+                <div class="radio-option">
+                    <input type="radio" id="very-good" name="mood" value="very-good">
+                    <label for="very-good">😄 Very good</label>
+                </div>
+
 
                 <label for="mood-description">
                     Would you like to share something?
@@ -55,7 +57,7 @@
 
                 <textarea id="mood-description" rows="5"></textarea>
 
-                <a href="./reflection.html">
+                <a href="./reflection.html" class="btn">
                     Continue
                 </a>
 
