@@ -159,8 +159,21 @@ textarea:focus{
 
     border-radius: 10px;
     margin-top: 15px;
-}*/
+}
+    */
+    
+/*LIJN*/
 
+hr{
+    border: none;
+    border-top: 1px solid #d7d7cf;
+    margin: 30px 0;
+}
+
+
+.question{
+    margin-bottom: 35px;
+}
 
 /* FOOTER */
 footer{
