@@ -59,6 +59,10 @@ nav a:hover{
     color:#D9A741;
 }
 
+.logo{
+    width:150px;
+    height:auto;
+}
 /* FORMS */
 
 form{
