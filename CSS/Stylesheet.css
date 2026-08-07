@@ -12,8 +12,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #EEEFE8;
     color: #0A6A6C;
-text-align: center;
-line-height: 1.8;
+    text-align: center;
+    line-height: 1.8;
     max-width: 450px;
     margin: auto;
 
@@ -29,6 +29,7 @@ main{
 header{
     text-align: center;
     padding: 20px;
+    border-bottom: 1px solid #D9A741;
 }
 
 header img{
@@ -85,11 +86,18 @@ label{
 
 .radio-option{
     display: flex;
-    align-items: center;
-    gap: 8px;
-    justify-content: center;
-    margin: 8px 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    margin: 12px 0;
 }
+
+.radio-option label{
+    margin: 0;
+    text-align: left;
+}
+
+/*TEXTAREA*/
 
 input,
 textarea{
@@ -102,11 +110,11 @@ textarea{
     box-sizing: border-box;
 }
 
+/*SLIDER*/
 
-
-
-input[type="radio"]{
-    accent-color: #0A6A6C;
+.slider{
+accent-color: #0A6A6C;
+width: 100%;
 }
 
 input:focus,
@@ -166,7 +174,7 @@ textarea:focus{
 
 hr{
     border: none;
-    border-top: 1px solid #d7d7cf;
+    border-top: 0.5px solid #0A6A6C;
     margin: 30px 0;
 }
 
@@ -176,11 +184,13 @@ hr{
 }
 
 /* FOOTER */
+
 footer{
     text-align: center;
     padding: 20px;
     font-size: 12px;
-    color: #666;
+    color: #0A6A6C;
+    border-top: 1px solid #D9A741;
 }
 
 /* LOGIN-REGISTER */

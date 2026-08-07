@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say No(o) Compass</title>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="./Images/favicon-16x16.png">
+
+</head>
+
+<body>
+    <header>
+        <h1><img src="./Images/logo NoCompass.png" alt="Say No(o) Compass" height="150px" width="150px">
+            Say No(o) Compass</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="Confidence">
+
+            <h2>Confidence</h2>
+            <p>Almost done!</p>
+            <p>Take a moment to think about how confident you feel about your decision.</p>
+
+            <form>
+                <label for="confidence">
+                    How confident do you feel about your decision?
+                </label>
+
+                <input type="range" id="confidence" name="confidence" min="1" max="10" value="5" class="slider">
+                <hr>
+                <label for="confidence-description">
+                    Would you like to add anything before receiving your reflection?
+                </label>
+
+                <textarea id="confidence-description" name="confidence-description" rows="6" placeholder="Optional...">
+
+                </textarea>
+                <a href="./mirror.html" class="btn">
+                    Generate my reflection
+                </a>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Say No(o) Compass. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
