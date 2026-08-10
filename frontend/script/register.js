@@ -4,10 +4,48 @@ form.addEventListener("submit", async (event) => {
 
     event.preventDefault();
 
-    // gegevens ophalen
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-    // fetch()
+    try {
 
-    // antwoord verwerken
+        const response = await fetch("http://localhost:3000/register", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                name,
+                email,
+                password
+            })
+
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+
+            alert("Registration successful!");
+
+            window.location.href = "./login.html";
+
+        } else {
+
+            alert(data.message);
+
+        }
+
+    } catch (error) {
+
+        alert("Unable to connect to the server.");
+
+        console.error(error);
+
+    }
 
 });
