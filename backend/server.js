@@ -3,9 +3,15 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const OpenAI = require("openai");
+
 const User = require("./models/User");
 
 const app = express();
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+});
 
 app.use(cors());
 app.use(express.json());
@@ -14,12 +20,12 @@ const PORT = 3000;
 
 // MongoDB connectie
 mongoose.connect(process.env.MONGODB_URI)
-.then(() => {
-    console.log("✅ Connected to MongoDB");
-})
-.catch((err) => {
-    console.error("❌ MongoDB connection failed:", err);
-});
+    .then(() => {
+        console.log("✅ Connected to MongoDB");
+    })
+    .catch((err) => {
+        console.error("❌ MongoDB connection failed:", err);
+    });
 
 // Testroute
 app.get("/test", (req, res) => {
@@ -30,8 +36,6 @@ app.get("/test", (req, res) => {
 });
 
 // Register
-//tijdelijke regel om te testen of de register route werkt, later vervangen door een echte register route
-//console.log(">>> Register route loaded");
 app.post("/register", async (req, res) => {
 
     try {
@@ -62,6 +66,7 @@ app.post("/register", async (req, res) => {
 
 });
 
+//Login
 app.post("/login", async (req, res) => {
 
     try {
@@ -104,12 +109,82 @@ app.post("/login", async (req, res) => {
 
 });
 
+//Analyse
 app.post("/analyse", async (req, res) => {
 
-    res.json({
-        success: true,
-        advice: "Dummy advice for testing."
-    });
+    try {
+
+        const {
+            mood,
+            situation,
+            whyYes,
+            whyNo,
+            consequenceYes,
+            consequenceNo
+        } = req.body;
+
+        const prompt = `
+A person is struggling to decide whether to say yes or no.
+
+Mood:
+${mood}
+
+Situation:
+${situation}
+
+Reasons to say YES:
+${whyYes}
+
+Reasons to say NO:
+${whyNo}
+
+Consequences of saying YES:
+${consequenceYes}
+
+Consequences of saying NO:
+${consequenceNo}
+
+Give balanced advice.
+Do not make the decision for the user.
+Keep your answer under 150 words.
+`;
+
+        const response = await openai.chat.completions.create({
+
+            model: "gpt-4o-mini",
+
+            messages: [
+                {
+                    role: "system",
+                    content: "You are a supportive coach helping people reflect before making decisions."
+                },
+                {
+                    role: "user",
+                    content: prompt
+                }
+            ]
+
+        });
+
+        res.json({
+
+            success: true,
+            advice: response.choices[0].message.content
+
+        });
+
+    } catch (error) {
+
+        console.error(error);
+
+        res.status(500).json({
+
+            success: false,
+            message: error.message
+
+        });
+
+    }
 
 });
 
