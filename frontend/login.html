@@ -27,18 +27,18 @@
 
             <h2>Login</h2>
 
-            <form action="/submit-login" method="post">
-                <!-- TODO: Replace the <label for="email">Email:</label><br> -->
-                <label for="username">Usernam</label>
-                <input type="text" id="username" name="username" required>
+            <form id="login-form">
                 
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
 
-                <!-- <input type="submit" value="Login"> -->
-                <!-- TODO: Replace this link with a real submit button when backend is implemented -->
-                <a href="./mood.html" class="btn">Login</a>
+                
+            <button type="submit" class="btn">Login</button>
             </form>
+
 
             <p>Don't have an account? <a href="./register.html" class="btn">Create an account</a></p>
 
@@ -48,6 +48,7 @@
          <footer>
     <p>&copy; 2026 Say No(o) Compass. All rights reserved.</p>
 </footer>
+<script src="./script/login.js"></script>
 </body>
 
 </html>
