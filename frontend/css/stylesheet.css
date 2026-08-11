@@ -64,6 +64,7 @@ nav a:hover{
     width: 150px;
     height: auto;
 }
+
 /* FORMS */
 
 form{
@@ -85,22 +86,24 @@ label{
 }
 
 .radio-option{
-    display: flex;
-    align-items: flex-start;
+      display: flex;
+    align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    margin: 12px 0;
+    margin: 12px auto;
+    width: fit-content;
 }
 
 .radio-option label{
     margin: 0;
-    text-align: left;
+    text-align: center;
+
 }
 
 /*TEXTAREA*/
 
-input,
-textarea{
+input:not([type="radio"]),
+textarea {
     padding: 12px;
     width: 100%;
     border: 1px solid #ccc;
@@ -204,6 +207,11 @@ footer{
     box-shadow:0 0 10px rgba(0,0,0,0.1); */
 }
 
+.radio-option input[type="radio"] {
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
 
 
 

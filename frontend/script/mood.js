@@ -6,4 +6,9 @@ form.addEventListener("submit", async (event) => {
 
     const mood = document.querySelector('input[name="mood"]:checked').value;
     const description = document.getElementById("mood-description").value;
+
+    localStorage.setItem("mood", mood);
+    localStorage.setItem("moodDescription", description);
+
+    window.location.href = "./situation.html";
 });
