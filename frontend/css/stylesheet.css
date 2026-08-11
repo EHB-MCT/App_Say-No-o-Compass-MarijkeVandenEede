@@ -109,9 +109,19 @@ textarea {
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 10px;
-
     font-size: 16px;
     box-sizing: border-box;
+}
+
+/*AI-textarea*/
+.ai-reflection {
+    background-color: #EEEFE8z;
+    border: 1px solid #0A6A6C;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    white-space: pre-wrap;
+    min-height: 180px;
 }
 
 /*SLIDER*/

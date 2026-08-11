@@ -20,7 +20,6 @@
                 <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
-        </nav>
     </header>
 
     <main>
@@ -40,27 +39,28 @@
 <p>🟡 Yellow</p>
 <p>🔴 Red</p>
        
-        <label>
+        <h3>
             Reflection
-        </label>
-<p>You seem to want to help others,
-but your answers also show that
-you are putting your own needs aside.</p>
+        </h3>
+<div id="reflection-output" class="ai-reflection">
+</div>
 
   <label>
             If a friend were in the same situation, what advice would you give them?
         </label>
-        <textarea rows="6" placeholder="Optional..."></textarea>
+        <textarea rows="6" placeholder="Write your advice here..."></textarea>
        
        
        
-        <a href="./mood.html" class="btn">
-            Start a new reflection
-        </a>
+        <button type="button" id="new-reflection-btn" class="btn">
+    Start a new reflection
+</button>
 
         <a href="./index.html" class="btn">
             Back to Home
         </a>
+
+
     </section>
 
 </main>
@@ -68,6 +68,7 @@ you are putting your own needs aside.</p>
          <footer>
     <p>&copy; 2026 Say No(o) Compass. All rights reserved.</p>
 </footer>
+<script src="./script/mirror.js"></script>
 </body>
 
 </html>
