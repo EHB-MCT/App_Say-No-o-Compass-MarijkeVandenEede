@@ -116,11 +116,14 @@ app.post("/analyse", async (req, res) => {
 
         const {
             mood,
-            situation,
+            moodDescription,
+            situationDescription,
             whyYes,
             whyNo,
             consequenceYes,
-            consequenceNo
+            consequenceNo,
+            confidence,
+            confidenceDescription,
         } = req.body;
 
         const prompt = `
@@ -130,7 +133,7 @@ Mood:
 ${mood}
 
 Situation:
-${situation}
+${situationDescription}
 
 Reasons to say YES:
 ${whyYes}
@@ -143,6 +146,12 @@ ${consequenceYes}
 
 Consequences of saying NO:
 ${consequenceNo}
+
+Confidence:
+${confidence}/10
+
+Additional thoughts:
+${confidenceDescription}
 
 Give balanced advice.
 Do not make the decision for the user.

@@ -92,6 +92,7 @@ label{
     gap: 10px;
     margin: 8px auto;
     width: fit-content;
+    accent-color: #0A6A6C;
 }
 
 .radio-option label{
