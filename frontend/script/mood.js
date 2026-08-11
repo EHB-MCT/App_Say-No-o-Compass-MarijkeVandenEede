@@ -9,6 +9,6 @@ form.addEventListener("submit", async (event) => {
 
     localStorage.setItem("mood", mood);
     localStorage.setItem("moodDescription", description);
-
+console.log("Ik ga nu naar situation.html");
     window.location.href = "./situation.html";
 });
