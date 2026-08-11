@@ -32,9 +32,9 @@
                 Take a moment to reflect on how you are feeling right now.
             </p>
 
-            <form>
+            <form id="mood-form">
 
-                <!--TODO:  Verbeter de weergave van de mood-selectie. Mogelijk vervangen door gestylede keuzekaarten of een mooiere radiobutton-opmaak. Frontend eerst volledig afwerken. -->
+                <!-- Multiple Choice-->
                 <div class="radio-option">
                     <input type="radio" id="very-bad" name="mood" value="very-bad">
                     <label for="very-bad">😞 Very bad</label>
@@ -50,16 +50,16 @@
                     <label for="very-good">😄 Very good</label>
                 </div>
 
-
+                <!-- free answer -->
                 <label for="mood-description">
                     Would you like to share something?
                 </label>
 
                 <textarea id="mood-description" rows="5"></textarea>
 
-                <a href="./situation.html" class="btn">
+                <button type="submit" class="btn">
                     Continue
-                </a>
+                </button>
 
             </form>
 
@@ -70,6 +70,7 @@
     <footer>
         <p>&copy; 2026 Say No(o) Compass. All rights reserved.</p>
     </footer>
+    <script src="./script/mood.js"></script>
 </body>
 
 </html>
